@@ -55,7 +55,7 @@ const HomeWork2302: React.FC<IHomeWork2302Props> = ({ users, clickHandler, hide 
         </ul></div>
         :<div>Спрятан</div>
     }
-    <button className={styles.btn_hide} onClick={(e) => clickHandler(user.id, e)}>hide</button>
+    <button className={styles.btn_hide} onClick={(e) => clickHandler(user.id, e)}>{!hide ? 'hide' : 'show'}</button>
   </div>
       )}
     </div>

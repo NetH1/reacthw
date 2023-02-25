@@ -26,7 +26,7 @@ const HomePage:FC<HomePageProps> = () => {
     const clickHandler = (id:number, e: React.MouseEvent<HTMLButtonElement | undefined>):void =>{
         const newUsers = [...users].map(user =>{
               if(user.id == id) {
-                  setHide(true)
+                  setHide(prev => !prev)
               }
               return user
           })
