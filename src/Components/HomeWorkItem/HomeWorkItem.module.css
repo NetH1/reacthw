@@ -1,0 +1,79 @@
+.card{
+    background: #1A1B21;
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+}
+.main_content{
+    padding: 35px;
+}
+.image{
+    width: 100%;
+    display: block;
+}
+.image img{
+    width: 100%;
+    object-fit: cover;
+}
+.p_profession{
+    color: #F3BF99;
+    font-size: 13px;
+}
+.div_text_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.span_name{
+    font-weight: 700;
+    font-size: 25px;
+}
+.p_website{
+    font-size: 12px;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.link_email{
+    background: #fff;
+    padding: 9px 20px;
+    border-radius: 6px;
+    color: #374151;
+}
+.link_linkedIn{
+    background: #5093E2;
+    padding: 9px 18px;
+    border-radius: 6px;
+    color: #fff;
+}
+.links_4{
+    background: #161619;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px 0;
+}
+ul li{
+    list-style: none;
+}
+.link_icon{
+    width: 30px;
+    background: #918E9B;
+    padding:8px;
+    border-radius: 10px;
+}
+.btn_hide{
+    background: #161619;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+}

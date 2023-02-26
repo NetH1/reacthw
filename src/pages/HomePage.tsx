@@ -21,20 +21,12 @@ const HomePage:FC<HomePageProps> = () => {
         {id:2,name:"Laura Smith",profession:"Frontend Developer",website:"laurasmith.website", abouttext:"I am a frontend developer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn.", interesttext:"Food expert. Music scholar. Reader. Internet fanatic. Bacon buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.", image:teacther},
         {id:3,name:"Laura Smith",profession:"Frontend Developer",website:"laurasmith.website", abouttext:"I am a frontend developer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn.", interesttext:"Food expert. Music scholar. Reader. Internet fanatic. Bacon buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.", image:teacther},
     ]);
-    const [hide, setHide] = useState<boolean>(false)
+    
 
-    const clickHandler = (id:number, e: React.MouseEvent<HTMLButtonElement | undefined>):void =>{
-        const newUsers = [...users].map(user =>{
-              if(user.id == id) {
-                  setHide(prev => !prev)
-              }
-              return user
-          })
-          setUsers(newUsers)
-      }
+    
     return (
         <div>
-            <HomeWork2302 users={users} clickHandler={clickHandler} hide={hide} />
+            <HomeWork2302 users={users} />
         </div>
     );
 };
