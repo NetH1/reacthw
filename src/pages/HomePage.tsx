@@ -1,5 +1,6 @@
 import {FC, useState} from 'react';
-import HomeWork2302 from '../Components/HomeWork2302/HomeWork2302';
+import FeedBack from '../Components/HomeWorkFeedback/FeedBack';
+import TennisCardList from '../Components/HomeWorkTennisCard/TennisCardList/TennisCardList'
 import teacther from '../images/teacher.png'
 
 interface HomePageProps {
@@ -25,8 +26,9 @@ const HomePage:FC<HomePageProps> = () => {
 
     
     return (
-        <div>
-            <HomeWork2302 users={users} />
+        <div className='wrapper'>
+            {/* <TennisCardList users={users} /> */}
+            <FeedBack />
         </div>
     );
 };

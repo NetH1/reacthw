@@ -7,4 +7,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.wrapper{
+  background: black;
+  color: white;
+  height: 100vh;
+  padding: calc(1200px - 50%);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label, input{
+  margin: 15px;
+}
+button{
+  background: white;
+  color: black;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+}

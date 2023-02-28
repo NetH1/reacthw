@@ -1,8 +1,8 @@
-import styles from "./HomeWorkItem.module.css";
-import MyLink from "../UI/MyLink/MyLink";
+import styles from "./TennisCardItem.module.css";
+import MyLink from "../../UI/MyLink/MyLink";
 import { FC,useState } from "react";
 
-interface HomeWorkItemProps {
+interface ITennisCardItemProps {
   user: {
     id: number;
     name: string;
@@ -23,15 +23,10 @@ interface HomeWorkItemProps {
   }[];
 }
 
-const HomeWorkItem:FC<HomeWorkItemProps> = ({user, users}) => {
+const TennisCardItem:FC<ITennisCardItemProps> = ({user, users}) => {
     const [hide, setHide] = useState<boolean>(false);
-    const clickHandler = (id: number,e: React.MouseEvent<HTMLButtonElement | undefined>): void => {
-        [...users].map(user => {
-          if (user.id == id) {
-            setHide(true);
-          }
-          return user;
-        });
+    const clickHandler = (e: React.MouseEvent<HTMLButtonElement | undefined>): void => {
+        setHide(true)
       };
   return (
     <div className={styles.card}>
@@ -102,7 +97,7 @@ const HomeWorkItem:FC<HomeWorkItemProps> = ({user, users}) => {
     </ul>
     <button
         className={styles.btn_hide}
-        onClick={(e) => clickHandler(user.id, e)}
+        onClick={(e) => clickHandler(e)}
       >
         {!hide ? "hide" : "show"}
       </button></div>
@@ -112,4 +107,4 @@ const HomeWorkItem:FC<HomeWorkItemProps> = ({user, users}) => {
   );
 };
 
-export default HomeWorkItem;
+export default TennisCardItem;

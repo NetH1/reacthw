@@ -1,8 +1,8 @@
-import styles from "./HomeWork2302.module.css";
+import styles from "./TennisCardList.module.css";
 import { FC } from "react";
-import HomeWorkItem from "../HomeWorkItem/HomeWorkItem";
+import TennisCardItem from "../TennisCardItem/TennisCardItem";
 
-interface IHomeWork2302Props {
+interface ITennisCardListProps {
   users: {
     id: number;
     name: string;
@@ -14,23 +14,21 @@ interface IHomeWork2302Props {
   }[];
 }
 
-const HomeWork2302:FC<IHomeWork2302Props> = ({ users }) => {
+const TennisCardList:FC<ITennisCardListProps> = ({ users }) => {
   return (
     <>
       <div className={styles.wrapper}>
         {users &&
           users.map((user) => (
-            <div>
-              <HomeWorkItem
+              <TennisCardItem
                 key={user.id}
                 user={user}
                 users={users}
               />
-            </div>
           ))}
       </div>
     </>
   );
 };
 
-export default HomeWork2302;
+export default TennisCardList;
